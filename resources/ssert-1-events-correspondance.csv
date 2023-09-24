@@ -1,0 +1,15 @@
+redcap-event,suffix
+pre__evaluation_1_arm_1,_pre
+pre_evaluation_2_arm_1,_pre2
+intervention__sess_arm_1,_s3
+intervention__sess_arm_1b,_s5
+intervention__sess_arm_1c,_s6
+intervention__sess_arm_1d,_s10
+post__evaluation_arm_1,_post
+pre__evaluation_1_arm_2,_pre
+pre_evaluation_2_arm_2,_pre2
+intervention__sess_arm_2,_s3
+intervention__sess_arm_2b,_s5
+intervention_sessi_arm_2,_s6
+intervention__sess_arm_2c,_s10
+post__evaluation_arm_2,_post

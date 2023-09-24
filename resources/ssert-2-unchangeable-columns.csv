@@ -1,0 +1,17 @@
+unchangeable-columns
+record_id
+redcap_survey_identifier
+email
+email_complete
+consent_en_timestamp
+consent_secondary_en
+consent_recontact_en
+consent_project_en
+consent_date_en
+consent_en_complete
+consent_fr_timestamp
+consent_secondary_fr
+consent_recontact_fr
+consent_project_fr
+consent_date_fr
+consent_fr_complete
