@@ -18,7 +18,7 @@ This Python script is designed to transform Redcap data stored in a CSV file, ad
 
 ## Installation
 1. Install the required libraries:
-pip install pandas tqdm
+pip install -r requirements.txt
 
 ## Usage
 
