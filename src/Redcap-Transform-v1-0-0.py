@@ -75,12 +75,15 @@ def main():
     win.geometry("700x300")
 
     messagebox.showinfo("File1", "Please select the csv file representing the Redcap database")
-    dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    df = open_csv_file(dir)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    if getattr(sys, 'frozen', False): #path for the onefile executable
+        current_dir = os.path.dirname(sys.executable)
+    parent_dir = os.path.dirname(current_dir)
+    grandparent_dir = os.path.dirname(parent_dir)
+    df = open_csv_file(grandparent_dir)
 
     messagebox.showinfo("File2", "Please select the csv file representing the Redcap events correspondance (in resources folder) for your database")
-    child_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    resources_dir = os.path.join(child_dir, 'resources')
+    resources_dir = os.path.join(parent_dir, 'resources')
     df_redcap_events = open_csv_file(resources_dir)
     redcap_events_dict = dict(zip(df_redcap_events['redcap-event'], df_redcap_events['suffix']))
 
@@ -90,6 +93,6 @@ def main():
 
     new_df = process_csv_file(df, redcap_events_dict, unchangeable_columns)
 
-    export_to_csv(new_df, dir)
+    export_to_csv(new_df, grandparent_dir)
 
 main()
