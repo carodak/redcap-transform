@@ -66,7 +66,7 @@ def process_csv_file(df, redcap_events_dict, redcap_unchangeable_columns):
 def export_to_csv(df, output_dir):
     current_date = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     output_filename = os.path.join(output_dir, f'redcap-transformed-{current_date}.csv')
-    df.to_csv(output_filename, index=False)
+    df.to_csv(output_filename, encoding='utf-8-sig', index=False)
     print("[COMPLETED] The operations are complete and the new .csv file has been successfully created. You can now close this program.")
 
 def main():
